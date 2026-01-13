@@ -3,10 +3,12 @@
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import { ThemeToggle } from "./ThemeToggle";
-import { Code2 } from "lucide-react";
+import { Code2, Menu, X } from "lucide-react";
+import { AnimatePresence, motion } from "framer-motion";
 
 export function Header({ data }: { data?: any }) {
     const [mounted, setMounted] = useState(false);
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
     useEffect(() => {
         setMounted(true);
@@ -43,13 +45,85 @@ export function Header({ data }: { data?: any }) {
                     </div>
                     <Link
                         href="/contact"
-                        className="bg-primary text-primary-foreground px-5 py-2.5 rounded-xl text-sm font-semibold shadow-sm hover:shadow active:scale-95 transition-all"
+                        className="hidden md:block bg-primary text-primary-foreground px-5 py-2.5 rounded-xl text-sm font-semibold shadow-sm hover:shadow active:scale-95 transition-all"
                         suppressHydrationWarning
                     >
                         Contacto
                     </Link>
+
+                    {/* Mobile Menu Toggle */}
+                    <button
+                        className="md:hidden p-2 text-text-secondary hover:text-text-primary bg-surface-hover rounded-lg transition-colors"
+                        onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                        aria-label="Toggle menu"
+                    >
+                        {isMobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+                    </button>
                 </div>
             </nav>
+
+            {/* Mobile Navigation Overlay */}
+            <AnimatePresence>
+                {isMobileMenuOpen && (
+                    <motion.div
+                        initial={{ opacity: 0, y: -20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: -20 }}
+                        className="absolute top-full left-0 right-0 p-4 z-40 md:hidden"
+                    >
+                        <nav className="bg-surface/95 backdrop-blur-xl border border-border-subtle rounded-2xl p-4 shadow-xl flex flex-col gap-4">
+                            <Link
+                                href="/projects"
+                                className="p-2 text-lg font-medium text-text-secondary hover:text-text-primary border-b border-border-subtle/50"
+                                onClick={() => setIsMobileMenuOpen(false)}
+                            >
+                                Proyectos
+                            </Link>
+                            <Link
+                                href="/android"
+                                className="p-2 text-lg font-medium text-text-secondary hover:text-text-primary border-b border-border-subtle/50"
+                                onClick={() => setIsMobileMenuOpen(false)}
+                            >
+                                Android
+                            </Link>
+                            <Link
+                                href="/"
+                                className="p-2 text-lg font-medium text-text-secondary hover:text-text-primary border-b border-border-subtle/50"
+                                onClick={() => setIsMobileMenuOpen(false)}
+                            >
+                                Stack
+                            </Link>
+                            <Link
+                                href="/blog"
+                                className="p-2 text-lg font-medium text-text-secondary hover:text-text-primary border-b border-border-subtle/50"
+                                onClick={() => setIsMobileMenuOpen(false)}
+                            >
+                                Blog
+                            </Link>
+                            <Link
+                                href="/about"
+                                className="p-2 text-lg font-medium text-text-secondary hover:text-text-primary border-b border-border-subtle/50"
+                                onClick={() => setIsMobileMenuOpen(false)}
+                            >
+                                Acerca de
+                            </Link>
+
+                            <div className="flex items-center justify-between pt-2">
+                                <span className="text-sm text-text-secondary font-medium px-2">Tema</span>
+                                <ThemeToggle />
+                            </div>
+
+                            <Link
+                                href="/contact"
+                                className="mt-2 text-center bg-primary text-primary-foreground px-5 py-3 rounded-xl text-base font-bold shadow-sm active:scale-95 transition-all"
+                                onClick={() => setIsMobileMenuOpen(false)}
+                            >
+                                Contacto
+                            </Link>
+                        </nav>
+                    </motion.div>
+                )}
+            </AnimatePresence>
         </header>
     );
 }

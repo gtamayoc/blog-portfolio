@@ -125,7 +125,7 @@ export default function ContactClient({ data }: { data: any }) {
                             <span className="w-1.5 h-1.5 bg-emerald-500 rounded-full animate-pulse" />
                             Disponible para Proyectos
                         </span>
-                        <h1 className="text-4xl md:text-5xl font-extrabold text-text-primary mt-6 mb-6" suppressHydrationWarning>
+                        <h1 className="text-3xl md:text-5xl font-extrabold text-text-primary mt-6 mb-6" suppressHydrationWarning>
                             <span suppressHydrationWarning>Hablemos de tu próximo paso.</span>
                         </h1>
                         <p className="text-text-secondary text-lg leading-relaxed mb-8" suppressHydrationWarning>

@@ -44,7 +44,7 @@ export default function ProjectsClient({ posts, pageData }: { posts: any[], page
             <div className="container mx-auto max-w-6xl px-4 pt-16 pb-12" suppressHydrationWarning>
                 <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-6" suppressHydrationWarning>
                     <div suppressHydrationWarning>
-                        <h1 className="text-4xl font-extrabold tracking-tight text-text-primary mb-4" suppressHydrationWarning>
+                        <h1 className="text-3xl md:text-4xl font-extrabold tracking-tight text-text-primary mb-4" suppressHydrationWarning>
                             <span suppressHydrationWarning>{pageData?.title || "Mis Proyectos"}</span>
                         </h1>
                         <p className="text-lg text-text-secondary max-w-2xl leading-relaxed" suppressHydrationWarning>
@@ -64,7 +64,7 @@ export default function ProjectsClient({ posts, pageData }: { posts: any[], page
 
             {/* Projects Grid */}
             <div className="container mx-auto max-w-6xl px-4" suppressHydrationWarning>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" suppressHydrationWarning>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8" suppressHydrationWarning>
                     {sortedPosts.map((post) => {
                         return (
                             <div key={post.slug} className="group bg-surface rounded-2xl overflow-hidden shadow-sm hover:shadow-md hover:-translate-y-0.5 hover:border-border-active transition-all duration-300 border border-border-subtle flex flex-col h-full" suppressHydrationWarning>

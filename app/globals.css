@@ -78,11 +78,15 @@
 
 @layer base {
   body {
-    @apply bg-page text-text-primary antialiased;
+    @apply bg-page text-text-primary antialiased overflow-x-hidden min-h-[100dvh];
     /* Smooth theme transition */
     transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-duration: 300ms;
+  }
+
+  html {
+    @apply overflow-x-hidden;
   }
 
   /* Typography Defaults */

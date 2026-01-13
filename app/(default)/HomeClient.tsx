@@ -57,7 +57,7 @@ export default function HomeClient({ data }: { data: any }) {
                             )}
 
                             {hero.title && (
-                                <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight" suppressHydrationWarning>
+                                <h1 className="text-[clamp(2.5rem,5vw,4.5rem)] md:text-[clamp(3rem,6vw,5.5rem)] font-extrabold tracking-tight leading-tight" suppressHydrationWarning>
                                     {hero.title.split("&").map((p: string, i: number) => (
                                         <span key={i} suppressHydrationWarning>
                                             {i === 1 ? <span className="text-primary block" suppressHydrationWarning>& {p.trim()}</span> : p}

@@ -53,7 +53,7 @@ export default async function RootLayout({
             enableSystem
             disableTransitionOnChange
           >
-            <div className="min-h-screen flex flex-col pt-8" suppressHydrationWarning>
+            <div className="min-h-[100dvh] flex flex-col pt-4 md:pt-8 overflow-x-hidden" suppressHydrationWarning>
               <Header data={globalData} />
               <main className="flex-grow" suppressHydrationWarning>
                 {children}

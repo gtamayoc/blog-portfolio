@@ -41,7 +41,7 @@ export default function AboutClient({ data }: { data: any }) {
 
     return (
         <main className="min-h-screen bg-page py-12 md:py-20 px-4" suppressHydrationWarning>
-            <div className="container mx-auto max-w-6xl grid grid-cols-1 lg:grid-cols-3 gap-8" suppressHydrationWarning>
+            <div className="container mx-auto max-w-6xl grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8" suppressHydrationWarning>
 
                 {/* Sidebar */}
                 <aside className="space-y-6" suppressHydrationWarning>

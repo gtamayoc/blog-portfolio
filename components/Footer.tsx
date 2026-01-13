@@ -28,7 +28,7 @@ export function Footer({ data }: { data?: any }) {
                     <span suppressHydrationWarning>© {year} {data.name} | {copy}</span>
                 </span>
 
-                <span className="flex items-center gap-6 text-sm font-medium text-text-secondary" suppressHydrationWarning>
+                <span className="flex items-center gap-6 text-sm font-medium text-text-secondary flex-wrap justify-center md:justify-end" suppressHydrationWarning>
                     {socials?.playstore && (
                         <a href={socials.playstore} target="_blank" className="flex items-center gap-1.5 hover:text-text-primary transition-colors" suppressHydrationWarning>
                             <PlayCircle className="w-4 h-4" /> <span suppressHydrationWarning>PlayStore</span>

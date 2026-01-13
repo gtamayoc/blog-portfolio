@@ -38,7 +38,7 @@ export default function BlogClient({ posts, pageData }: { posts: any[], pageData
         <main className="min-h-screen bg-page pb-20" suppressHydrationWarning>
             {/* Header Section */}
             <div className="container mx-auto max-w-6xl px-4 pt-16 pb-12" suppressHydrationWarning>
-                <h1 className="text-4xl font-extrabold tracking-tight text-text-primary mb-2" suppressHydrationWarning>
+                <h1 className="text-3xl md:text-4xl font-extrabold tracking-tight text-text-primary mb-2" suppressHydrationWarning>
                     Blog & Artículos
                 </h1>
                 <p className="text-lg text-text-secondary max-w-2xl" suppressHydrationWarning>
@@ -50,7 +50,7 @@ export default function BlogClient({ posts, pageData }: { posts: any[], pageData
                 {/* Featured Hero Post */}
                 {featuredPost && (
                     <Link href={`/blog/${featuredPost.slug}`} className="group block" suppressHydrationWarning>
-                        <article className="grid md:grid-cols-2 gap-8 bg-surface rounded-2xl p-8 border border-border-subtle shadow-sm hover:shadow-md hover:border-border-active transition-all duration-300" suppressHydrationWarning>
+                        <article className="grid md:grid-cols-2 gap-4 md:gap-8 bg-surface rounded-2xl p-6 md:p-8 border border-border-subtle shadow-sm hover:shadow-md hover:border-border-active transition-all duration-300" suppressHydrationWarning>
                             <div className="bg-surface-hover rounded-xl h-64 md:h-96 w-full relative overflow-hidden ring-1 ring-border-subtle" suppressHydrationWarning>
                                 <div className="absolute inset-0 bg-gradient-to-br from-orange-100 to-indigo-100 opacity-50" suppressHydrationWarning />
                                 {featuredPost.featured && (
