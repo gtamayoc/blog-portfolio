@@ -1,0 +1,106 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@theme inline {
+  /* Semantic Tokens mapped to Tailwind utilities */
+  --color-page: var(--bg-page);
+  --color-surface: var(--bg-surface);
+  --color-surface-hover: var(--bg-surface-hover);
+
+  --color-border-subtle: var(--border-subtle);
+  --color-border-active: var(--border-active);
+
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-accent: var(--text-accent);
+
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+
+  --radius-xl: 0.75rem;
+  --radius-2xl: 1rem;
+  --radius-3xl: 1.5rem;
+
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+/* Light Mode (Default) - Slate / Indigo */
+:root {
+  --bg-page: #f8fafc;
+  /* slate-50 */
+  --bg-surface: #ffffff;
+  --bg-surface-hover: #f1f5f9;
+  /* slate-100 */
+
+  --border-subtle: #e2e8f0;
+  /* slate-200 */
+  --border-active: #c7d2fe;
+  /* indigo-200 */
+
+  --text-primary: #0f172a;
+  /* slate-900 */
+  --text-secondary: #64748b;
+  /* slate-500 */
+  --text-accent: #4f46e5;
+  /* indigo-600 */
+
+  --primary: #4f46e5;
+  /* indigo-600 */
+  --primary-foreground: #ffffff;
+}
+
+/* Dark Mode - Premium Neutral/Grey */
+.dark {
+  --bg-page: #0a0a0a;
+  /* neutral-950 */
+  --bg-surface: #171717;
+  /* neutral-900 */
+  --bg-surface-hover: #262626;
+  /* neutral-800 */
+
+  --border-subtle: #262626;
+  /* neutral-800 */
+  --border-active: #525252;
+  /* neutral-600 */
+
+  --text-primary: #fafafa;
+  /* neutral-50 */
+  --text-secondary: #a3a3a3;
+  /* neutral-400 */
+  --text-accent: #818cf8;
+  /* indigo-400 */
+
+  --primary: #6366f1;
+  /* indigo-500 */
+  --primary-foreground: #ffffff;
+}
+
+@layer base {
+  body {
+    @apply bg-page text-text-primary antialiased;
+    /* Smooth theme transition */
+    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 300ms;
+  }
+
+  /* Typography Defaults */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply text-text-primary tracking-tight font-semibold text-balance;
+  }
+
+  p {
+    @apply leading-relaxed;
+  }
+
+  /* Focus Accessibility */
+  :focus-visible {
+    @apply outline-none ring-2 ring-primary ring-offset-2 ring-offset-page;
+  }
+}
