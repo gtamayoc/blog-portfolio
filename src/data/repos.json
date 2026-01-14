@@ -3,9 +3,13 @@
     "title": "blog-portfolio",
     "description": "Portafolio de ingeniería estático impulsado por MDX y blog creado con Next.js (App Router) e implementado en GitHub Pages.",
     "url": "https://github.com/gtamayoc/blog-portfolio",
-    "homepage": null,
+    "homepage": "https://gtamayoc.github.io/blog-portfolio",
     "language": "TypeScript",
-    "topics": [],
+    "topics": [
+      "Next.js",
+      "Portfolio",
+      "MDX"
+    ],
     "stars": 0,
     "forks": 0,
     "updated_at": "2026-01-13T23:34:34Z",
@@ -13,83 +17,110 @@
   },
   {
     "title": "OGandHTHUL",
-    "description": "Online Games and How They Help Us Learn",
+    "description": "Online Games and How They Help Us Learn - Una exploración sobre el impacto educativo de los videojuegos en línea.",
     "url": "https://github.com/gtamayoc/OGandHTHUL",
     "homepage": null,
     "language": "JavaScript",
-    "topics": [],
+    "topics": [
+      "Education",
+      "Game Design"
+    ],
     "stars": 0,
     "forks": 0,
     "updated_at": "2025-12-10T05:44:38Z",
     "type": "Project"
   },
   {
-    "title": "Exercism-Solutions-Syncer-Tutorial-Exercise",
-    "description": "Repositorio para almacenar copias de seguridad y versiones organizadas de los ejercicios resueltos en Exercism.",
+    "title": "Exercism Solutions",
+    "description": "Repositorio centralizado con soluciones optimizadas y documentadas para ejercicios de programación en la plataforma Exercism.",
     "url": "https://github.com/gtamayoc/Exercism-Solutions-Syncer-Tutorial-Exercise",
     "homepage": null,
     "language": "Kotlin",
-    "topics": [],
+    "topics": [
+      "Algorithms",
+      "Practice",
+      "Clean Code"
+    ],
     "stars": 0,
     "forks": 0,
     "updated_at": "2025-11-16T17:18:57Z",
-    "type": "Mobile App"
+    "type": "Open Source"
   },
   {
     "title": "Shotly",
-    "description": "Shotly es una aplicación intuitiva para capturar, organizar y visualizar tus capturas de pantalla desde un solo lugar. Rápida, ligera y fácil de usar, pensada para usuarios que quieren tener sus capturas siempre a mano.",
+    "description": "Herramienta ligera para gestión y organización de capturas de pantalla, optimizada para un flujo de trabajo rápido y eficiente.",
     "url": "https://github.com/gtamayoc/Shotly",
     "homepage": null,
     "language": "Kotlin",
-    "topics": [],
+    "topics": [
+      "Productivity",
+      "Android",
+      "Tool"
+    ],
     "stars": 0,
     "forks": 0,
     "updated_at": "2025-09-11T13:36:25Z",
     "type": "Mobile App"
   },
   {
-    "title": "Red-Hub",
-    "description": "Red Hub es una aplicación pensada para reunir en un solo lugar toda la información y herramientas relacionadas con Red Dead Redemption 2. Desde guías de desafíos, mapas interactivos, consejos de progresión, hasta seguimiento de estadísticas y logros para alcanzar el 100% del juego.",
+    "title": "Red Hub",
+    "description": "Companion App integral para RDR2. Incluye guías interactivas, seguimiento de progreso y herramientas para el completismo.",
     "url": "https://github.com/gtamayoc/Red-Hub",
     "homepage": null,
     "language": "Kotlin",
-    "topics": [],
+    "topics": [
+      "Gaming",
+      "Guide",
+      "Android"
+    ],
     "stars": 0,
     "forks": 0,
     "updated_at": "2025-08-19T01:06:26Z",
     "type": "Mobile App"
   },
   {
-    "title": "Red-Dead-Companion",
-    "description": "Red Dead Companion ofrece la experiencia más completa para dominar Red Dead Redemption 2, con una interfaz moderna en Compose y toda la información que necesitas al alcance de tu mano.",
+    "title": "RDR2 Companion",
+    "description": "Versión moderna de la guía para Red Dead Redemption 2, construida totalmente con Jetpack Compose para una UI fluida.",
     "url": "https://github.com/gtamayoc/Red-Dead-Companion",
     "homepage": null,
-    "language": null,
-    "topics": [],
+    "language": "Kotlin",
+    "topics": [
+      "Jetpack Compose",
+      "UI/UX",
+      "Android"
+    ],
     "stars": 0,
     "forks": 0,
     "updated_at": "2025-08-04T01:24:45Z",
     "type": "Project"
   },
   {
-    "title": "CardDexTCG",
-    "description": "CardDexTCG es una aplicación diseñada para organizar cartas de Pokémon TCG de manera eficiente. Permite a los usuarios completar sus colecciones, compartir su catálogo y ver las cartas de sus amigos, incluyendo aquellas que necesitan para sus sets. Una herramienta ideal para coleccionistas y jugadores que buscan gestionar e intercambiar cartas.",
+    "title": "CardDex TCG",
+    "description": "Gestor de colecciones para Pokémon TCG. Permite organizar cartas, rastrear sets completos y facilitar intercambios entre usuarios.",
     "url": "https://github.com/gtamayoc/CardDexTCG",
     "homepage": null,
     "language": "Java",
-    "topics": [],
+    "topics": [
+      "TCG",
+      "Collection",
+      "Android"
+    ],
     "stars": 0,
     "forks": 0,
     "updated_at": "2025-02-12T04:25:32Z",
     "type": "Project"
   },
   {
-    "title": "put0",
-    "description": "Juego de cartas",
+    "title": "Puto Card Game",
+    "description": "Implementación digital del popular juego de cartas social, enfocado en manejo de estado y lógica de juego multijugador local.",
     "url": "https://github.com/gtamayoc/put0",
     "homepage": null,
     "language": "Java",
-    "topics": [],
+    "topics": [
+      "Game Logic",
+      "Multiplayer",
+      "Java"
+    ],
     "stars": 0,
     "forks": 0,
     "updated_at": "2025-02-08T22:06:43Z",

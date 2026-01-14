@@ -65,18 +65,18 @@ export default function AndroidClient({ posts, pageData }: { posts: any[], pageD
                 <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-6" suppressHydrationWarning>
                     <div suppressHydrationWarning>
                         <h1 className="text-4xl font-extrabold tracking-tight text-text-primary mb-4" suppressHydrationWarning>
-                            <span suppressHydrationWarning>{pageData?.title || "Desarrollo Android"}</span>
+                            <span suppressHydrationWarning>{pageData?.title || "Ecosistema Android"}</span>
                         </h1>
                         <p className="text-lg text-text-secondary max-w-2xl leading-relaxed" suppressHydrationWarning>
-                            <span suppressHydrationWarning>{pageData?.description || "Especializado en aplicaciones financieras y sistemas embebidos."}</span>
+                            <span suppressHydrationWarning>{pageData?.description || "Desarrollo de ecosistemas móviles robustos para el sector financiero. Especializado en integración de hardware POS, protocolos de pago y arquitecturas escalables."}</span>
                         </p>
                     </div>
                     <div className="flex gap-3" suppressHydrationWarning>
-                        <span className="px-4 py-2 bg-surface border border-border-subtle rounded-full text-sm font-semibold text-text-secondary shadow-sm" suppressHydrationWarning>
-                            Senior Level
+                        <span className="px-4 py-2 bg-emerald-500/10 border border-emerald-500/20 rounded-full text-sm font-semibold text-emerald-700 shadow-sm" suppressHydrationWarning>
+                            Expertise en POS
                         </span>
-                        <span className="px-4 py-2 bg-surface border border-border-subtle rounded-full text-sm font-semibold text-text-secondary shadow-sm" suppressHydrationWarning>
-                            Architect
+                        <span className="px-4 py-2 bg-blue-500/10 border border-blue-500/20 rounded-full text-sm font-semibold text-blue-700 shadow-sm" suppressHydrationWarning>
+                            Pagos QR & ISO8583
                         </span>
                     </div>
                 </div>
@@ -84,7 +84,7 @@ export default function AndroidClient({ posts, pageData }: { posts: any[], pageD
 
             {/* Projects Grid */}
             <div className="container mx-auto max-w-6xl px-4" suppressHydrationWarning>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" suppressHydrationWarning>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" suppressHydrationWarning>
                     {sortedPosts.map((post) => {
                         const Icon = ICON_MAP[post.slug] || Code2;
                         const iconColorClass = COLOR_MAP[post.slug] || "bg-gray-100 text-gray-600";
@@ -97,10 +97,10 @@ export default function AndroidClient({ posts, pageData }: { posts: any[], pageD
                                         <Icon className="w-8 h-8" strokeWidth={1.5} />
                                     </div>
                                     <div className="flex flex-col items-end" suppressHydrationWarning>
-                                        <h3 className="text-lg font-bold text-text-primary" suppressHydrationWarning>
+                                        <h3 className="text-lg font-bold text-text-primary text-right leading-tight max-w-[170px]" suppressHydrationWarning>
                                             <span suppressHydrationWarning>{post.title_es || post.title}</span>
                                         </h3>
-                                        <span className={cn("text-xs font-bold uppercase tracking-wider", iconColorClass.split(" ")[1])} suppressHydrationWarning>
+                                        <span className={cn("text-[10px] font-bold uppercase tracking-wider mt-1 opacity-80", iconColorClass.split(" ")[1])} suppressHydrationWarning>
                                             <span suppressHydrationWarning>{post.complexity_es || "Alta Complejidad"}</span>
                                         </span>
                                     </div>
@@ -116,26 +116,28 @@ export default function AndroidClient({ posts, pageData }: { posts: any[], pageD
 
                                 {/* Architecture Tag */}
                                 {post.tags && post.tags.length > 0 && (
-                                    <div className="mb-4" suppressHydrationWarning>
-                                        <span className={cn("inline-flex items-center px-2.5 py-1 rounded-md text-xs font-medium",
-                                            post.tags[0].includes("Architecture") ? "bg-emerald-500/10 text-emerald-700" :
-                                                post.tags[0].includes("Performance") ? "bg-blue-500/10 text-blue-700" :
-                                                    "bg-purple-500/10 text-purple-700"
-                                        )} suppressHydrationWarning>
-                                            {post.tags[0]}
-                                        </span>
+                                    <div className="mb-4 flex flex-wrap gap-2" suppressHydrationWarning>
+                                        {post.tags.slice(0, 2).map((tag: string) => (
+                                            <span key={tag} className={cn("inline-flex items-center px-2.5 py-1 rounded-md text-xs font-medium",
+                                                tag.includes("Architecture") ? "bg-emerald-500/10 text-emerald-700" :
+                                                    tag.includes("Performance") ? "bg-blue-500/10 text-blue-700" :
+                                                        "bg-purple-500/10 text-purple-700"
+                                            )} suppressHydrationWarning>
+                                                {tag}
+                                            </span>
+                                        ))}
                                     </div>
                                 )}
 
                                 {/* Description */}
-                                <p className="text-text-secondary text-sm leading-relaxed mb-6 flex-1" suppressHydrationWarning>
+                                <p className="text-text-secondary text-sm leading-relaxed mb-6 flex-1 line-clamp-3" suppressHydrationWarning>
                                     <span suppressHydrationWarning>{post.description_es || post.description}</span>
                                 </p>
 
                                 {/* Stack */}
                                 <div className="flex flex-wrap gap-2 mb-6" suppressHydrationWarning>
-                                    {post.stack?.map((tech: string) => (
-                                        <span key={tech} className="px-2 py-1 bg-surface-hover text-text-secondary text-[10px] font-bold rounded-md uppercase tracking-wide" suppressHydrationWarning>
+                                    {post.stack?.slice(0, 4).map((tech: string) => (
+                                        <span key={tech} className="px-2 py-1 bg-surface-hover text-text-secondary text-[10px] font-bold rounded-md uppercase tracking-wide border border-border-subtle" suppressHydrationWarning>
                                             {tech}
                                         </span>
                                     ))}
@@ -143,12 +145,21 @@ export default function AndroidClient({ posts, pageData }: { posts: any[], pageD
 
                                 {/* Actions */}
                                 <div className="flex items-center gap-3 mt-auto" suppressHydrationWarning>
-                                    <Link href={`/android/${post.slug}`} className="flex-1 bg-emerald-600 hover:bg-emerald-700 text-white text-sm font-semibold py-2.5 px-4 rounded-xl transition-colors text-center shadow-sm" suppressHydrationWarning>
+                                    <Link href={`/android/${post.slug}`} className="flex-1 bg-emerald-600 hover:bg-emerald-700 text-white text-sm font-semibold py-2.5 px-4 rounded-xl transition-colors text-center shadow-md shadow-emerald-900/5" suppressHydrationWarning>
                                         Ver Detalles
                                     </Link>
-                                    <button className="p-2.5 border border-border-subtle rounded-xl hover:bg-surface-hover text-text-secondary transition-colors" suppressHydrationWarning title="Código Fuente">
-                                        <Code2 className="w-5 h-5" />
-                                    </button>
+                                    {post.repo && (
+                                        <a
+                                            href={post.repo}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="p-2.5 border border-border-subtle rounded-xl hover:bg-surface-hover text-text-secondary transition-colors"
+                                            suppressHydrationWarning
+                                            title="Ver Código en GitHub"
+                                        >
+                                            <Code2 className="w-5 h-5" />
+                                        </a>
+                                    )}
                                 </div>
                             </div>
                         );
