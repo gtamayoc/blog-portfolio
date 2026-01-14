@@ -7,7 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "translate": "node scripts/translate.js"
+    "translate": "node scripts/translate.js",
+    "scrape": "node scripts/scrape-repos.js",
+    "prebuild": "npm run scrape"
   },
   "dependencies": {
     "clsx": "^2.1.1",

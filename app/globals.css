@@ -25,49 +25,50 @@
   --font-mono: var(--font-geist-mono);
 }
 
-/* Light Mode (Default) - Slate / Indigo */
+/* Light Mode (Default) - Soft Pastel / High Contrast Text */
+/* Light Mode (Revised) - Clean & Readable */
 :root {
-  --bg-page: #f8fafc;
-  /* slate-50 */
-  --bg-surface: #ffffff;
+  --bg-page: #ffffff;
+  /* Pure white base */
+  --bg-surface: #f8fafc;
+  /* slate-50 for cards */
   --bg-surface-hover: #f1f5f9;
   /* slate-100 */
 
-  --border-subtle: #e2e8f0;
-  /* slate-200 */
-  --border-active: #c7d2fe;
-  /* indigo-200 */
+  --border-subtle: #cbd5e1;
+  /* slate-300 - Distinct but not heavy */
+  --border-active: #94a3b8;
+  /* slate-400 */
 
   --text-primary: #0f172a;
-  /* slate-900 */
-  --text-secondary: #64748b;
-  /* slate-500 */
-  --text-accent: #4f46e5;
-  /* indigo-600 */
+  /* slate-900 - High contrast */
+  --text-secondary: #475569;
+  /* slate-600 - Visible but clearly secondary */
+  --text-accent: #4338ca;
+  /* indigo-700 - Slightly darker for accessibility */
 
   --primary: #4f46e5;
-  /* indigo-600 */
   --primary-foreground: #ffffff;
 }
 
-/* Dark Mode - Premium Neutral/Grey */
+/* Dark Mode - Deep & Balanced */
 .dark {
-  --bg-page: #0a0a0a;
-  /* neutral-950 */
-  --bg-surface: #171717;
-  /* neutral-900 */
-  --bg-surface-hover: #262626;
-  /* neutral-800 */
+  --bg-page: #09090b;
+  /* zinc-950 - Deep black/grey */
+  --bg-surface: #18181b;
+  /* zinc-900 */
+  --bg-surface-hover: #27272a;
+  /* zinc-800 */
 
-  --border-subtle: #262626;
-  /* neutral-800 */
-  --border-active: #525252;
-  /* neutral-600 */
+  --border-subtle: #27272a;
+  /* zinc-800 */
+  --border-active: #52525b;
+  /* zinc-600 */
 
-  --text-primary: #fafafa;
-  /* neutral-50 */
-  --text-secondary: #a3a3a3;
-  /* neutral-400 */
+  --text-primary: #f4f4f5;
+  /* zinc-100 - Not pure white, easier on eyes */
+  --text-secondary: #a1a1aa;
+  /* zinc-400 - Good contrast against dark bg */
   --text-accent: #818cf8;
   /* indigo-400 */
 
@@ -107,4 +108,25 @@
   :focus-visible {
     @apply outline-none ring-2 ring-primary ring-offset-2 ring-offset-page;
   }
+}
+
+@utility prose-custom {
+  @apply prose prose-slate dark:prose-invert prose-headings:text-text-primary prose-p:text-text-secondary prose-strong:text-text-primary prose-code:text-text-accent;
+  /* Override default prose colors with our high-contrast variables */
+  --tw-prose-body: var(--text-secondary);
+  --tw-prose-headings: var(--text-primary);
+  --tw-prose-lead: var(--text-secondary);
+  --tw-prose-links: var(--primary);
+  --tw-prose-bold: var(--text-primary);
+  --tw-prose-counters: var(--text-secondary);
+  --tw-prose-bullets: var(--text-secondary);
+  --tw-prose-hr: var(--border-subtle);
+  --tw-prose-quotes: var(--text-primary);
+  --tw-prose-quote-borders: var(--border-active);
+  --tw-prose-captions: var(--text-secondary);
+  --tw-prose-code: var(--text-accent);
+  --tw-prose-pre-code: var(--text-primary);
+  --tw-prose-pre-bg: var(--bg-surface-hover);
+  --tw-prose-th-borders: var(--border-subtle);
+  --tw-prose-td-borders: var(--border-subtle);
 }

@@ -21,8 +21,8 @@ export function Header({ data }: { data?: any }) {
     const displayName = data?.shortName || data?.name || "Giuseppe T.";
 
     return (
-        <header className="sticky top-4 z-50 px-4 mb-8" suppressHydrationWarning>
-            <nav className="max-w-6xl mx-auto bg-surface/80 backdrop-blur-md border border-border-subtle rounded-2xl p-3 flex items-center justify-between shadow-sm transition-colors duration-300" suppressHydrationWarning>
+        <header className="sticky top-4 z-[999] px-4 mb-8" suppressHydrationWarning>
+            <nav className="max-w-6xl mx-auto bg-surface/80 backdrop-blur-xl border border-border-subtle rounded-2xl p-3 flex items-center justify-between shadow-sm transition-all duration-300" suppressHydrationWarning>
                 <Link href="/" className="flex items-center gap-2 px-2 group" suppressHydrationWarning>
                     <span className="bg-primary/10 p-2 rounded-xl text-primary group-hover:bg-primary/20 transition-colors inline-flex" suppressHydrationWarning>
                         <Code2 className="w-5 h-5" />

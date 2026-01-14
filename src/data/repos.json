@@ -1,0 +1,98 @@
+[
+  {
+    "title": "blog-portfolio",
+    "description": "Portafolio de ingeniería estático impulsado por MDX y blog creado con Next.js (App Router) e implementado en GitHub Pages.",
+    "url": "https://github.com/gtamayoc/blog-portfolio",
+    "homepage": null,
+    "language": "TypeScript",
+    "topics": [],
+    "stars": 0,
+    "forks": 0,
+    "updated_at": "2026-01-13T23:34:34Z",
+    "type": "Project"
+  },
+  {
+    "title": "OGandHTHUL",
+    "description": "Online Games and How They Help Us Learn",
+    "url": "https://github.com/gtamayoc/OGandHTHUL",
+    "homepage": null,
+    "language": "JavaScript",
+    "topics": [],
+    "stars": 0,
+    "forks": 0,
+    "updated_at": "2025-12-10T05:44:38Z",
+    "type": "Project"
+  },
+  {
+    "title": "Exercism-Solutions-Syncer-Tutorial-Exercise",
+    "description": "Repositorio para almacenar copias de seguridad y versiones organizadas de los ejercicios resueltos en Exercism.",
+    "url": "https://github.com/gtamayoc/Exercism-Solutions-Syncer-Tutorial-Exercise",
+    "homepage": null,
+    "language": "Kotlin",
+    "topics": [],
+    "stars": 0,
+    "forks": 0,
+    "updated_at": "2025-11-16T17:18:57Z",
+    "type": "Mobile App"
+  },
+  {
+    "title": "Shotly",
+    "description": "Shotly es una aplicación intuitiva para capturar, organizar y visualizar tus capturas de pantalla desde un solo lugar. Rápida, ligera y fácil de usar, pensada para usuarios que quieren tener sus capturas siempre a mano.",
+    "url": "https://github.com/gtamayoc/Shotly",
+    "homepage": null,
+    "language": "Kotlin",
+    "topics": [],
+    "stars": 0,
+    "forks": 0,
+    "updated_at": "2025-09-11T13:36:25Z",
+    "type": "Mobile App"
+  },
+  {
+    "title": "Red-Hub",
+    "description": "Red Hub es una aplicación pensada para reunir en un solo lugar toda la información y herramientas relacionadas con Red Dead Redemption 2. Desde guías de desafíos, mapas interactivos, consejos de progresión, hasta seguimiento de estadísticas y logros para alcanzar el 100% del juego.",
+    "url": "https://github.com/gtamayoc/Red-Hub",
+    "homepage": null,
+    "language": "Kotlin",
+    "topics": [],
+    "stars": 0,
+    "forks": 0,
+    "updated_at": "2025-08-19T01:06:26Z",
+    "type": "Mobile App"
+  },
+  {
+    "title": "Red-Dead-Companion",
+    "description": "Red Dead Companion ofrece la experiencia más completa para dominar Red Dead Redemption 2, con una interfaz moderna en Compose y toda la información que necesitas al alcance de tu mano.",
+    "url": "https://github.com/gtamayoc/Red-Dead-Companion",
+    "homepage": null,
+    "language": null,
+    "topics": [],
+    "stars": 0,
+    "forks": 0,
+    "updated_at": "2025-08-04T01:24:45Z",
+    "type": "Project"
+  },
+  {
+    "title": "CardDexTCG",
+    "description": "CardDexTCG es una aplicación diseñada para organizar cartas de Pokémon TCG de manera eficiente. Permite a los usuarios completar sus colecciones, compartir su catálogo y ver las cartas de sus amigos, incluyendo aquellas que necesitan para sus sets. Una herramienta ideal para coleccionistas y jugadores que buscan gestionar e intercambiar cartas.",
+    "url": "https://github.com/gtamayoc/CardDexTCG",
+    "homepage": null,
+    "language": "Java",
+    "topics": [],
+    "stars": 0,
+    "forks": 0,
+    "updated_at": "2025-02-12T04:25:32Z",
+    "type": "Project"
+  },
+  {
+    "title": "put0",
+    "description": "Juego de cartas",
+    "url": "https://github.com/gtamayoc/put0",
+    "homepage": null,
+    "language": "Java",
+    "topics": [],
+    "stars": 0,
+    "forks": 0,
+    "updated_at": "2025-02-08T22:06:43Z",
+    "type": "Project"
+  }
+]

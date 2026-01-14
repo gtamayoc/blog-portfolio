@@ -1,5 +1,7 @@
 import { getPostBySlug, getFiles } from "@/lib/mdx";
 import { MDXContent } from "@/components/MDXContent";
+import { SmartBack } from "@/components/SmartBack";
+import { ScrollProgress } from "@/components/ScrollProgress";
 import { notFound } from "next/navigation";
 
 export const dynamicParams = false;
@@ -22,10 +24,14 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
     if (!post) notFound();
 
     return (
-        <div className="container mx-auto max-w-3xl py-12 px-4" suppressHydrationWarning>
-            <article className="prose prose-lg dark:prose-invert max-w-none" suppressHydrationWarning>
-                <MDXContent source={post.content} />
-            </article>
-        </div>
+        <>
+            <ScrollProgress />
+            <div className="container mx-auto max-w-3xl py-12 px-4" suppressHydrationWarning>
+                <SmartBack />
+                <article className="prose-custom prose-lg max-w-none" suppressHydrationWarning>
+                    <MDXContent source={post.content} />
+                </article>
+            </div>
+        </>
     );
 }
